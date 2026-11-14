@@ -195,14 +195,29 @@ export default function HomePage() {
     if (sortBy) params.set('sort', sortBy);
 
     fetch(`/api/products?${params.toString()}`)
-      .then((r) => (r.ok ? r.json() : { products: [] }))
+      .then((r) => {
+        if (!r.ok) throw new Error('API request failed');
+        return r.json();
+      })
       .then((data) => {
-        setProducts(data.products || []);
+        if (data.products && data.products.length > 0) {
+          setProducts(data.products);
+        } else {
+          throw new Error('No products returned');
+        }
         setLoading(false);
       })
       .catch(() => {
-        setProducts([]);
-        setLoading(false);
+        // Fallback to static catalogue data (enables offline/GitHub Pages/Vercel previews)
+        import('../data/productsFallback.json')
+          .then((m) => {
+            setProducts(m.default || []);
+            setLoading(false);
+          })
+          .catch(() => {
+            setProducts([]);
+            setLoading(false);
+          });
       });
   }, [sortBy]);
 

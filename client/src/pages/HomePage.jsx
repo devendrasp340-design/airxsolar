@@ -25,6 +25,8 @@ import ReviewCarousel from '../components/shared/ReviewCarousel';
 import FAQAccordion from '../components/shared/FAQAccordion';
 import HeroTypingHeadline from '../components/shared/HeroTypingHeadline';
 import useSEO from '../hooks/useSEO';
+import useJsonLd from '../hooks/useJsonLd';
+import { splitSystemProduct, DUCTED_PRODUCT, withContext } from '../utils/productSchema';
 
 const splitHighlights = [
   'Reverse cycle heating & cooling',
@@ -183,6 +185,16 @@ export default function HomePage() {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+
+  // Product JSON-LD for every catalogue unit + the ducted package (removed on unmount)
+  const productSchema = useMemo(
+    () =>
+      products.length
+        ? withContext([...[...products].sort((a, b) => a.id - b.id).map(splitSystemProduct), DUCTED_PRODUCT])
+        : null,
+    [products]
+  );
+  useJsonLd('home-products', productSchema);
 
   // Close sort dropdown when clicking outside
   useEffect(() => {

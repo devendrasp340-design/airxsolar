@@ -4,6 +4,8 @@ import { ZoomIn, X } from 'lucide-react';
 import Header from '../components/layout/Header';
 import { apiFetch, normalizeAuPhone } from '../utils/api';
 import useSEO from '../hooks/useSEO';
+import useJsonLd from '../hooks/useJsonLd';
+import { DUCTED_PRODUCT } from '../utils/productSchema';
 
 const ZONES_DATA = [
   { id: 0, name: 'Master bed', x: 20, y: 20, w: 190, h: 130, offset: -1, on: true, flow: 80, vent: [105, 28] },
@@ -66,6 +68,7 @@ export default function DuctedSystemsPage() {
       'Daikin 10.0 kW ducted reverse cycle air conditioning with AirTouch 5 zoning, fully installed in Perth for $9,500 + GST. Licensed installers. Fixed quote.',
     path: '/ducted-systems',
   });
+  useJsonLd('ducted-product', { '@context': 'https://schema.org', ...DUCTED_PRODUCT });
   // Headline Typing Graphics State ("Cool" <-> "Heat")
   const [wordIdx, setWordIdx] = useState(0);
   const [charCount, setCharCount] = useState(TYPING_WORDS[0].length);

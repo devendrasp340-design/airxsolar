@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, ArrowRight, BookOpen } from 'lucide-react';
+import useSEO from '../hooks/useSEO';
 
 export default function BlogPage() {
+  useSEO({
+    title: 'Perth Air Conditioning Tips & Buying Guides | AirXSolar',
+    description:
+      'Split vs ducted, sizing, running costs and servicing advice for Perth homes. Air conditioning buying guides from licensed WA installers.',
+    path: '/blog',
+  });
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -24,7 +31,7 @@ export default function BlogPage() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h1 className="font-heading font-extrabold text-3xl lg:text-4xl text-navy mb-3">
-            AirXSolar Perth AC Blog
+            AirXSolar Perth Air Conditioning Blog
           </h1>
           <p className="text-navy/65 text-sm lg:text-base">
             Buying guides, energy efficiency tips, and cooling insights tailored for Western Australian homes.

@@ -134,8 +134,8 @@ export default function Footer() {
               <div className="flex items-start gap-2.5 text-white/70 text-sm py-1">
                 <Clock className="w-4 h-4 text-amber shrink-0 mt-0.5" />
                 <div>
-                  <p>Mon–Fri: 8:00 AM – 5:00 PM AWST</p>
-                  <p>Sat–Sun: Closed</p>
+                  <p>Open 24 hours</p>
+                  <p>7 days a week</p>
                 </div>
               </div>
             </div>

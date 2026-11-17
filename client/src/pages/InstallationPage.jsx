@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import QuoteModal from '../components/shared/QuoteModal';
 import TrustBar from '../components/shared/TrustBar';
+import useSEO from '../hooks/useSEO';
 
 const suburbs = [
   'Joondalup', 'Fremantle', 'Rockingham', 'Armadale',
@@ -20,6 +21,12 @@ const suburbs = [
 ];
 
 export default function InstallationPage() {
+  useSEO({
+    title: 'Split & Ducted Aircon Installation Perth | AirXSolar',
+    description:
+      'Licensed ARCtick air conditioning installers across Perth. Split systems installed in 2–4 hours, ducted with clean roof ducting. Free quote today.',
+    path: '/installation',
+  });
   const [quoteOpen, setQuoteOpen] = useState(false);
   const [quoteProduct, setQuoteProduct] = useState('AC Installation');
 
@@ -40,7 +47,7 @@ export default function InstallationPage() {
                 <ShieldCheck className="w-4 h-4" /> ARCtick &amp; WA Electrical Licensed Installers
               </div>
               <h1 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl mb-4 leading-tight">
-                Fast, Clean &amp; Certified AC Installation Across Perth
+                Fast, Clean &amp; Certified Air Conditioning Installation Across Perth
               </h1>
               <p className="text-white/80 text-base lg:text-lg mb-8 leading-relaxed max-w-xl">
                 Split systems installed in 2–4 hours. Whole-home ducted solutions completed with precision roof ducting, drop sheets, and zero mess left behind.
@@ -108,7 +115,7 @@ export default function InstallationPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-navy">
-              Choose Your Installation Type
+              Choose Your Split or Ducted AC Installation
             </h2>
             <p className="text-navy/60 text-sm sm:text-base mt-2">
               Every system is installed by fully licensed ARC-certified refrigeration mechanics and electricians.
@@ -225,7 +232,7 @@ export default function InstallationPage() {
               <Sparkles className="w-3.5 h-3.5 text-amber" /> Built for Perth Conditions
             </div>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-navy">
-              Quality Workmanship in Every Detail
+              Quality Aircon Installation Workmanship in Every Detail
             </h2>
             <p className="text-navy/60 text-sm sm:text-base mt-2">
               We never cut corners. From outdoor anti-vibration footings to roof cavity duct sealing, our work complies with AS/NZS 3000 standards.
@@ -304,7 +311,7 @@ export default function InstallationPage() {
         <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div>
             <h2 className="font-heading font-bold text-2xl lg:text-3xl text-navy mb-3">
-              Servicing All Perth Metro Suburbs
+              AC Installation Across All Perth Metro Suburbs
             </h2>
             <p className="text-navy/70 text-sm lg:text-base mb-5">
               Our mobile installation teams operate north, south, east, and west of the Swan River — with free delivery within 45km of Perth CBD.

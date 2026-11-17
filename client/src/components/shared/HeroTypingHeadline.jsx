@@ -47,7 +47,7 @@ export default function HeroTypingHeadline() {
   return (
     <h1 className="font-heading font-extrabold text-2xl xs:text-3xl sm:text-4xl lg:text-[2.45rem] leading-[1.15] tracking-tight mb-4 text-white">
       <span className="sr-only">
-        Stay Cool This Perth Summer With Unbeatable AC Deals
+        Perth Air Conditioning Installation: Stay Cool This Perth Summer With Unbeatable Split &amp; Ducted AC Deals
       </span>
 
       <span aria-hidden="true" className="block">

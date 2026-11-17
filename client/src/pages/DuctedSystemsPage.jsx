@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ZoomIn, X } from 'lucide-react';
 import Header from '../components/layout/Header';
 import { apiFetch, normalizeAuPhone } from '../utils/api';
+import useSEO from '../hooks/useSEO';
 
 const ZONES_DATA = [
   { id: 0, name: 'Master bed', x: 20, y: 20, w: 190, h: 130, offset: -1, on: true, flow: 80, vent: [105, 28] },
@@ -59,6 +60,12 @@ const TYPING_WORDS = ['Cool', 'Heat'];
 const TOTAL_AREA = ZONES_DATA.reduce((acc, z) => acc + z.w * z.h, 0);
 
 export default function DuctedSystemsPage() {
+  useSEO({
+    title: 'Ducted Air Conditioning Perth | Daikin 10kW | AirXSolar',
+    description:
+      'Daikin 10.0 kW ducted reverse cycle air conditioning with AirTouch 5 zoning, fully installed in Perth for $9,500 + GST. Licensed installers. Fixed quote.',
+    path: '/ducted-systems',
+  });
   // Headline Typing Graphics State ("Cool" <-> "Heat")
   const [wordIdx, setWordIdx] = useState(0);
   const [charCount, setCharCount] = useState(TYPING_WORDS[0].length);
@@ -1030,7 +1037,7 @@ export default function DuctedSystemsPage() {
           <div className="wrap hero-grid">
             <div className="hero-l">
               <h1>
-                <span className="sr-only">Cool and heat only the rooms you’re in.</span>
+                <span className="sr-only">Ducted Air Conditioning Perth: cool and heat only the rooms you’re in.</span>
                 <span aria-hidden="true">
                   <span
                     className="type-word"
@@ -1346,7 +1353,7 @@ export default function DuctedSystemsPage() {
                   <>
                     <h2>Get your fixed quote</h2>
                     <p className="n">
-                      A Perth specialist will call within 15 minutes during business hours (8am–5pm AWST).
+                      A Perth specialist will call you back promptly.
                     </p>
                     <form id="qf" noValidate onSubmit={handleSubmit}>
                       <div className="fld">
@@ -1443,7 +1450,7 @@ export default function DuctedSystemsPage() {
         <section className="s">
           <div className="wrap">
             <div className="sh">
-              <h2>What the $9,500 + GST covers</h2>
+              <h2>What the $9,500 + GST ducted installation covers</h2>
               <p>One price for the system, the install and the controls.</p>
             </div>
             <div className="offer">
@@ -1548,7 +1555,7 @@ export default function DuctedSystemsPage() {
         <section className="s">
           <div className="wrap">
             <div className="sh">
-              <h2>Why Perth homeowners choose us</h2>
+              <h2>Why Perth homeowners choose us for ducted air conditioning</h2>
             </div>
             <div className="pillars">
               <div>
@@ -1592,7 +1599,7 @@ export default function DuctedSystemsPage() {
           <div className="wrap">
             <div className="sh">
               <h2>What Perth customers say</h2>
-              <p>Rated 4.9 out of 5 on Google across Greater Perth.</p>
+              <p>Rated 5.0 out of 5 on Google from 12 reviews across Greater Perth.</p>
             </div>
             <div className="quotes">
               <blockquote>
@@ -1615,7 +1622,7 @@ export default function DuctedSystemsPage() {
         <section className="s">
           <div className="wrap">
             <div className="sh">
-              <h2>Package specifications</h2>
+              <h2>Daikin ducted package specifications</h2>
             </div>
             <div className="scroll">
               <table className="spec">

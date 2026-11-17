@@ -24,6 +24,7 @@ import TrustBar from '../components/shared/TrustBar';
 import ReviewCarousel from '../components/shared/ReviewCarousel';
 import FAQAccordion from '../components/shared/FAQAccordion';
 import HeroTypingHeadline from '../components/shared/HeroTypingHeadline';
+import useSEO from '../hooks/useSEO';
 
 const splitHighlights = [
   'Reverse cycle heating & cooling',
@@ -158,6 +159,12 @@ function FilterPanel({
 }
 
 export default function HomePage() {
+  useSEO({
+    title: 'Air Conditioning Installation Perth | Split & Ducted | AirXSolar',
+    description:
+      'Perth air conditioning installation & servicing. Split systems from $657 + GST, Daikin ducted $9,500 + GST installed. Licensed installers. Free quote.',
+    path: '/',
+  });
   const [quoteOpen, setQuoteOpen] = useState(false);
   const [quoteProduct, setQuoteProduct] = useState('');
   const [blogs, setBlogs] = useState([]);
@@ -511,7 +518,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-6 sm:mb-8 md:mb-10">
             <h2 className="font-heading font-bold text-2xl lg:text-3xl text-navy">
-              Complete Air Conditioning Solutions
+              Complete Air Conditioning Solutions in Perth
             </h2>
             <p className="text-navy/60 text-xs sm:text-sm lg:text-base mt-1.5 md:mt-2">
               Supply, installation, and servicing across all Perth suburbs
@@ -624,7 +631,7 @@ export default function HomePage() {
                 COMPREHENSIVE PERTH CATALOGUE
               </span>
               <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-navy tracking-tight">
-                Air Conditioning Range
+                Split System Air Conditioner Range
               </h2>
               <p className="text-navy/60 text-sm mt-1">
                 Showing {filteredProducts.length} units
@@ -798,7 +805,7 @@ export default function HomePage() {
                 </div>
 
                 <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white mb-2 leading-tight">
-                  Looking for Whole-Home Ducted Cooling &amp; Heating?
+                  Looking for Whole-Home Ducted Air Conditioning in Perth?
                 </h2>
 
                 <p className="text-white/80 text-sm sm:text-base leading-relaxed mb-5 max-w-xl">
@@ -878,7 +885,7 @@ export default function HomePage() {
           <div className="flex items-end justify-between mb-8">
             <div>
               <h2 className="font-heading font-bold text-2xl lg:text-3xl text-navy">
-                AC Tips &amp; Perth Guides
+                Perth Air Conditioning Tips &amp; Guides
               </h2>
               <p className="text-navy/60 text-sm mt-1">
                 Expert advice to help you choose and maintain the right system

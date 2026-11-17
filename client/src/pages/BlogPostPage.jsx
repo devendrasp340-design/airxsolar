@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User } from 'lucide-react';
 import QuoteModal from '../components/shared/QuoteModal';
+import useSEO from '../hooks/useSEO';
 
 function extractYouTubeId(url) {
   if (!url) return null;
@@ -16,6 +17,14 @@ export default function BlogPostPage() {
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
   const [quoteOpen, setQuoteOpen] = useState(false);
+
+  useSEO({
+    title: post ? `${post.title} | Perth Air Conditioning | AirXSolar` : '',
+    description:
+      post?.excerpt ||
+      (post ? `${post.title} — Perth air conditioning advice from AirXSolar's licensed split & ducted installers.` : ''),
+    path: `/blog/${slug}`,
+  });
 
   useEffect(() => {
     setLoading(true);

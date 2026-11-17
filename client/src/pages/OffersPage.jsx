@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Tag, Calendar, ArrowRight, Sparkles } from 'lucide-react';
 import QuoteModal from '../components/shared/QuoteModal';
+import useSEO from '../hooks/useSEO';
 
 export default function OffersPage() {
+  useSEO({
+    title: 'Air Conditioning Deals Perth | Split & Ducted | AirXSolar',
+    description:
+      'Current Perth air conditioning specials on split systems and Daikin ducted packages, installed by licensed WA technicians. Prices ex GST. Free quote.',
+    path: '/offers',
+  });
   const [offers, setOffers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [quoteOpen, setQuoteOpen] = useState(false);
@@ -34,7 +41,7 @@ export default function OffersPage() {
             <Sparkles className="w-3.5 h-3.5 text-amber" /> Limited Time Perth Specials
           </span>
           <h1 className="font-heading font-extrabold text-3xl lg:text-4xl text-navy mb-3">
-            Current Air Conditioning Offers
+            Current Perth Air Conditioning Offers
           </h1>
           <p className="text-navy/65 text-sm lg:text-base">
             All promotional prices are listed excluding GST. Request your free quote today to lock in these specials (conditions apply).

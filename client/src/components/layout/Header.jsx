@@ -38,8 +38,8 @@ export default function Header() {
       <div className="bg-navy text-white text-[11px] sm:text-xs md:text-sm w-full border-b border-white/10">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 py-1.5 sm:py-2 flex flex-col sm:flex-row items-center justify-between gap-1 sm:gap-2">
           <div className="text-white/90 text-center sm:text-left leading-tight">
-            <span className="sm:hidden font-medium">Free Perth Delivery (45 km) · Mon–Fri 8am–5pm</span>
-            <span className="hidden sm:inline">Free delivery within 45 km of Perth CBD · Mon–Fri 8am–5pm AWST</span>
+            <span className="sm:hidden font-medium">Free Perth Delivery (45 km) · Open 24 Hours</span>
+            <span className="hidden sm:inline">Free delivery within 45 km of Perth CBD · Open 24 hours, 7 days</span>
           </div>
           <div className="flex items-center justify-center sm:justify-end gap-2.5 sm:gap-3 font-bold shrink-0 leading-tight">
             <a

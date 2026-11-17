@@ -62,19 +62,19 @@ export default function ReviewCarousel() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className="font-heading font-bold text-2xl lg:text-3xl text-navy mb-2">
-            What Perth Families Say
+            What Perth Families Say About Our Air Conditioning
           </h2>
           <div className="flex items-center justify-center gap-1">
             {[1, 2, 3, 4, 5].map((s) => (
               <Star key={s} className="w-5 h-5 text-amber fill-amber" />
             ))}
             <a
-              href="https://share.google/qHZkCMJyuuDAwEZzp"
+              href="https://maps.app.goo.gl/J8PPST9JEvabcBGD6"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 text-navy/70 hover:text-amber text-sm font-semibold ml-2 underline"
             >
-              5.0 on Google <ExternalLink className="w-3.5 h-3.5" />
+              5.0 on Google (12 reviews) <ExternalLink className="w-3.5 h-3.5" />
             </a>
           </div>
         </div>

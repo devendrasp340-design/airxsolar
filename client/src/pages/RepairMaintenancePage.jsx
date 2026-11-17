@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import QuoteModal from '../components/shared/QuoteModal';
 import TrustBar from '../components/shared/TrustBar';
+import useSEO from '../hooks/useSEO';
 
 const services = [
   {
@@ -40,6 +41,12 @@ const services = [
 ];
 
 export default function RepairMaintenancePage() {
+  useSEO({
+    title: 'Air Conditioning Repair & Servicing Perth | AirXSolar',
+    description:
+      'Same-day AC repairs & servicing across Perth for split & ducted systems — Daikin, Mitsubishi Electric, Fujitsu, Hisense & more. Book a technician.',
+    path: '/repair-maintenance',
+  });
   const [quoteOpen, setQuoteOpen] = useState(false);
   const [quoteProduct, setQuoteProduct] = useState('AC Repair / Maintenance');
 
@@ -130,7 +137,7 @@ export default function RepairMaintenancePage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-navy">
-              Complete Repair &amp; Servicing
+              Split &amp; Ducted AC Repair &amp; Servicing
             </h2>
             <p className="text-navy/60 text-sm sm:text-base mt-2">
               We service and repair Daikin, Mitsubishi Electric, MHI, Fujitsu, Hisense, TECO, Panasonic &amp; more.
@@ -202,7 +209,7 @@ export default function RepairMaintenancePage() {
             <div className="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
               <div>
                 <h2 className="font-heading font-bold text-2xl sm:text-3xl text-navy mb-3">
-                  Signs Your AC Needs Immediate Attention
+                  Signs Your Air Conditioner Needs Repair
                 </h2>
                 <p className="text-navy/60 text-sm mb-6">
                   Catching minor faults early prevents expensive compressor burnout and keeps your energy bills low.

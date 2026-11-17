@@ -50,7 +50,7 @@ export default function FAQAccordion() {
     <section className="py-12 lg:py-16 bg-slate">
       <div className="max-w-3xl mx-auto px-4">
         <h2 className="font-heading font-bold text-2xl lg:text-3xl text-navy text-center mb-10">
-          Frequently Asked Questions
+          Perth Air Conditioning FAQs
         </h2>
         <div className="space-y-3">
           {faqs.map((faq, index) => (

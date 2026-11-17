@@ -104,6 +104,15 @@ export default function Footer() {
             <h3 className="font-heading font-bold text-lg mb-4">Contact Us</h3>
             <div className="space-y-2 sm:space-y-3">
               <a
+                href="https://maps.app.goo.gl/J8PPST9JEvabcBGD6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-2.5 text-white/70 hover:text-amber transition-colors text-sm min-h-[38px] py-1"
+              >
+                <MapPin className="w-4 h-4 text-amber shrink-0 mt-0.5" />
+                <span>11 Lincoln Place, Canning Vale WA 6155</span>
+              </a>
+              <a
                 href="tel:+61481705789"
                 className="flex items-center gap-2.5 text-white/70 hover:text-amber transition-colors text-sm min-h-[38px] py-1"
               >
@@ -145,7 +154,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs sm:text-sm text-white/50 text-center sm:text-left">
           <p>&copy; {new Date().getFullYear()} AirXSolar. All rights reserved. *Conditions apply to offers &amp; 10-year warranty.</p>
-          <p>Licensed & Insured | ABN XX XXX XXX XXX</p>
+          <p>Licensed & Insured | ABN 27 692 609 055 | WA Electrical Lic: EC15996 | ARCtick Lic: L207042</p>
         </div>
       </div>
     </footer>

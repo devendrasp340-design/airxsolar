@@ -1702,7 +1702,7 @@ export default function DuctedSystemsPage() {
                 style={{ height: '28px', width: 'auto', display: 'block' }}
               />
             </Link>
-            <span>© 2026 AirXSolar Perth. Licensed &amp; insured. Conditions apply to promotional pricing and warranty.</span>
+            <span>© 2026 AirXSolar Perth. Licensed &amp; insured. ABN 27 692 609 055 | WA Electrical Lic: EC15996 | ARCtick Lic: L207042. Conditions apply to promotional pricing and warranty.</span>
           </div>
           <span style={{ fontWeight: 600 }}>
             <a href="tel:+61468428494" style={{ color: '#0B2545' }}>0468 428 494</a> &nbsp;|&nbsp; <a href="tel:+61481705789" style={{ color: '#0B2545' }}>0481 705 789</a>

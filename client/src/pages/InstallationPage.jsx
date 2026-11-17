@@ -335,7 +335,7 @@ export default function InstallationPage() {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-navy">ARCtick Refrigerant Handling Licence</h3>
-                <p className="text-sm text-navy/60">Compliant with Australian environmental &amp; safety standards.</p>
+                <p className="text-sm text-navy/60">Licence L207042. Compliant with Australian environmental &amp; safety standards.</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
